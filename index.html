@@ -25,6 +25,7 @@
       min-height: 100vh;
     }
 
+    /* NAV */
     nav {
       display: flex;
       align-items: center;
@@ -37,15 +38,41 @@
       backdrop-filter: blur(12px);
       z-index: 100;
     }
-    .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text);
+    }
     .logo span { color: var(--accent); }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color .2s;
+    }
     nav ul a:hover { color: var(--text); }
-    .nav-cta { background: var(--accent); color: #fff !important; padding: .45rem 1.1rem; border-radius: 6px; font-weight: 600; }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: .45rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
     .nav-cta:hover { opacity: .88; }
 
-    .hero { text-align: center; padding: 7rem 6% 5rem; position: relative; overflow: hidden; }
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 7rem 6% 5rem;
+      position: relative;
+      overflow: hidden;
+    }
     .hero::before {
       content: '';
       position: absolute;
@@ -67,51 +94,176 @@
       border-radius: 100px;
       margin-bottom: 1.5rem;
     }
-    h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; max-width: 780px; margin: 0 auto 1.5rem; }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+    }
     h1 em { font-style: normal; color: var(--accent); }
-    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 560px; margin: 0 auto 2.5rem; }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
     .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: .75rem 1.8rem; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all .2s; }
-    .btn-primary { background: var(--accent); color: #fff; border: none; }
+    .btn {
+      padding: .75rem 1.8rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+    }
     .btn-primary:hover { background: #b8674d; transform: translateY(-1px); }
-    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
     .btn-secondary:hover { border-color: var(--muted); transform: translateY(-1px); }
 
-    .terminal-wrap { margin: 4rem auto 0; max-width: 700px; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,.6); }
-    .terminal-bar { background: #1e1e22; padding: .6rem 1rem; display: flex; align-items: center; gap: .45rem; }
+    /* TERMINAL MOCKUP */
+    .terminal-wrap {
+      margin: 4rem auto 0;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0,0,0,.6);
+    }
+    .terminal-bar {
+      background: #1e1e22;
+      padding: .6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+    }
     .dot { width: 12px; height: 12px; border-radius: 50%; }
     .dot.r { background: #ff5f57; }
     .dot.y { background: #febc2e; }
     .dot.g { background: #28c840; }
-    .terminal-body { background: #0f0f12; padding: 1.4rem 1.6rem; font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: .88rem; line-height: 2; color: #b8b8cc; }
+    .terminal-body {
+      background: #0f0f12;
+      padding: 1.4rem 1.6rem;
+      font-family: 'Fira Code', 'Cascadia Code', monospace;
+      font-size: .88rem;
+      line-height: 2;
+      color: #b8b8cc;
+    }
     .terminal-body .prompt { color: var(--accent); }
     .terminal-body .cmd { color: #e8e8ed; }
     .terminal-body .out { color: #6ee7b7; }
     .terminal-body .comment { color: var(--muted); }
 
-    .features { padding: 6rem 6%; }
-    .section-label { text-align: center; font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
-    .section-title { text-align: center; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -.5px; margin-bottom: 3.5rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; transition: border-color .2s, transform .2s; }
+    /* FEATURES */
+    .features {
+      padding: 6rem 6%;
+    }
+    .section-label {
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -.5px;
+      margin-bottom: 3.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: border-color .2s, transform .2s;
+    }
     .card:hover { border-color: rgba(168,85,247,.4); transform: translateY(-3px); }
-    .icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
     .icon.purple { background: rgba(168,85,247,.15); }
     .icon.orange { background: rgba(204,120,92,.15); }
     .icon.green  { background: rgba(52,211,153,.12); }
     .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; }
     .card p  { font-size: .9rem; color: var(--muted); }
 
-    .stats { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 6%; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto; text-align: center; }
-    .stat-num { font-size: 2.6rem; font-weight: 800; color: var(--accent); letter-spacing: -1px; }
+    /* STATS */
+    .stats {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 6%;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -1px;
+    }
     .stat-label { font-size: .85rem; color: var(--muted); margin-top: .2rem; }
 
-    .cta-banner { padding: 6rem 6%; text-align: center; }
-    .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -.5px; margin-bottom: 1rem; }
+    /* CTA BANNER */
+    .cta-banner {
+      padding: 6rem 6%;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.5px;
+      margin-bottom: 1rem;
+    }
     .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
 
-    footer { border-top: 1px solid var(--border); padding: 2rem 6%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .82rem; color: var(--muted); }
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: .82rem;
+      color: var(--muted);
+    }
 
     @media (max-width: 640px) {
       nav ul { display: none; }
@@ -130,6 +282,7 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="badge">✦ Novo — Claude 4 disponível</div>
   <h1>Escreva código <em>mais rápido</em><br/>com IA que entende seu projeto</h1>
@@ -138,6 +291,7 @@
     <a href="#cta" class="btn btn-primary">Instalar agora</a>
     <a href="#features" class="btn btn-secondary">Ver recursos →</a>
   </div>
+
   <div class="terminal-wrap">
     <div class="terminal-bar">
       <span class="dot r"></span>
@@ -155,28 +309,67 @@
   </div>
 </section>
 
+<!-- FEATURES -->
 <section class="features" id="features">
   <div class="section-label">Capacidades</div>
   <h2 class="section-title">Tudo que você precisa, nada que você não precisa</h2>
   <div class="grid">
-    <div class="card"><div class="icon purple">🧠</div><h3>Contexto completo do repo</h3><p>Lê e entende a estrutura inteira do projeto antes de tocar em uma linha sequer.</p></div>
-    <div class="card"><div class="icon orange">⚡</div><h3>Edição multi-arquivo</h3><p>Refatora, renomeia e move código em dezenas de arquivos com consistência cirúrgica.</p></div>
-    <div class="card"><div class="icon green">🔁</div><h3>Loop test-fix automático</h3><p>Roda sua suíte de testes, identifica falhas e itera até tudo ficar verde.</p></div>
-    <div class="card"><div class="icon purple">🔗</div><h3>Integração com MCP</h3><p>Conecte GitHub, Jira, banco de dados e qualquer ferramenta via Model Context Protocol.</p></div>
-    <div class="card"><div class="icon orange">🛡️</div><h3>Segurança primeiro</h3><p>Confirma antes de ações destrutivas. Nunca faz push sem permissão explícita.</p></div>
-    <div class="card"><div class="icon green">🌐</div><h3>Deploy na nuvem</h3><p>Sessões remotas com acesso à internet, Cloudflare Tunnels e ambientes isolados.</p></div>
+    <div class="card">
+      <div class="icon purple">🧠</div>
+      <h3>Contexto completo do repo</h3>
+      <p>Lê e entende a estrutura inteira do projeto antes de tocar em uma linha sequer.</p>
+    </div>
+    <div class="card">
+      <div class="icon orange">⚡</div>
+      <h3>Edição multi-arquivo</h3>
+      <p>Refatora, renomeia e move código em dezenas de arquivos com consistência cirúrgica.</p>
+    </div>
+    <div class="card">
+      <div class="icon green">🔁</div>
+      <h3>Loop test-fix automático</h3>
+      <p>Roda sua suíte de testes, identifica falhas e itera até tudo ficar verde.</p>
+    </div>
+    <div class="card">
+      <div class="icon purple">🔗</div>
+      <h3>Integração com MCP</h3>
+      <p>Conecte GitHub, Jira, banco de dados e qualquer ferramenta via Model Context Protocol.</p>
+    </div>
+    <div class="card">
+      <div class="icon orange">🛡️</div>
+      <h3>Segurança primeiro</h3>
+      <p>Confirma antes de ações destrutivas. Nunca faz push sem permissão explícita.</p>
+    </div>
+    <div class="card">
+      <div class="icon green">🌐</div>
+      <h3>Deploy na nuvem</h3>
+      <p>Sessões remotas com acesso à internet, Cloudflare Tunnels e ambientes isolados.</p>
+    </div>
   </div>
 </section>
 
+<!-- STATS -->
 <section class="stats" id="stats">
   <div class="stats-grid">
-    <div><div class="stat-num">10×</div><div class="stat-label">mais rápido em tarefas repetitivas</div></div>
-    <div><div class="stat-num">200K</div><div class="stat-label">tokens de contexto</div></div>
-    <div><div class="stat-num">99%</div><div class="stat-label">uptime nas sessões cloud</div></div>
-    <div><div class="stat-num">50+</div><div class="stat-label">integrações via MCP</div></div>
+    <div>
+      <div class="stat-num">10×</div>
+      <div class="stat-label">mais rápido em tarefas repetitivas</div>
+    </div>
+    <div>
+      <div class="stat-num">200K</div>
+      <div class="stat-label">tokens de contexto</div>
+    </div>
+    <div>
+      <div class="stat-num">99%</div>
+      <div class="stat-label">uptime nas sessões cloud</div>
+    </div>
+    <div>
+      <div class="stat-num">50+</div>
+      <div class="stat-label">integrações via MCP</div>
+    </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-banner" id="cta">
   <h2>Pronto para codar com IA?</h2>
   <p>Instale o Claude Code em segundos e transforme seu fluxo de trabalho.</p>
